@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Customer</title>
+</head>
+<body>
+
+<div align="center">
+    <h1>View Customer</h1>
+    <hr>
+    <input th:type="hidden" name="id" th:field="*{customer.id}">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><a th:text="${customer.name}"></a></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><a th:text="${customer.email}"></a></td>
+        </tr>
+    </table>
+    <a th:href="@{/}">
+        Back to list
+    </a>
+</div>
+
+</body>
+</html>
